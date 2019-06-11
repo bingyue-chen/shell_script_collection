@@ -2,10 +2,10 @@
 
 function usage() { 
 	echo 'uasge :';
-	echo $0' [-d] {cert_path}';
-	echo "  -d        : Test sandbox(develop env)";
-	echo "  cert_path : Path of cert for testing";
-	echo "";
+	echo "$0"' [-d] {cert_path}';
+	echo '  -d        : Test sandbox(develop env)';
+	echo '  cert_path : Path of cert for testing';
+	echo '';
 }
 
 endpoint='gateway.push.apple.com:2195'
@@ -19,7 +19,7 @@ while getopts 'dh' flag; do
 	esac
 done
 
-if [ -z $cert ]; then
+if [ -z "$cert" ]; then
 	usage; exit 1;
 fi
 
